@@ -1,0 +1,6 @@
+cents = st_read(dsn = "data/c.geojson")
+l = st_read(dsn = "data/l.geojson")
+rf = st_read(dsn = "data/rf.geojson")
+rq = st_read(dsn = "data/rq.geojson")
+rnet = st_read(dsn = "data/rnet.geojson")
+z = st_read(dsn = "data/z.geojson")

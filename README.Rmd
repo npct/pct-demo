@@ -1,0 +1,59 @@
+---
+title: "Demonstrating the PCT, for education and reproducibility"
+output: github_document
+---
+
+Welcome to pct-demo, a small repo with a little code and data to how how the pct works.
+
+The starting point is that regional data has already been generated.
+See [pct-scripts](https://github.com/pctbike/pct-scripts) or an academic paper on the subject ([Lovelace et al. 2017](https://www.jtlu.org/index.php/jtlu/article/view/862)).
+
+We also assume your have R and RStudio installed and running on your computer.
+There is plenty of guidance online, notably on the RStudio website:  [rstudio.com](https://www.rstudio.com/products/rstudio/download/).
+
+The first step is to download the the repo https://github.com/npct/pct-demo/archive/master.zip - that contains both code and data.
+Note that it contains a .qgs file that can be opened with the open source program [QGIS](http://qgis.org/) - another powerful tool for analysing the geographical distribution of cycling potential.
+
+The remainder of this tutorial is based on R code, which can be found in the [code](https://github.com/npct/pct-demo/tree/master/code) folder.
+We encourage you to look over these scripts.
+The script to load-in the data, for example, can be opened with the following command:
+
+```{r, eval=FALSE}
+file.edit("code/load-data.R")
+```
+
+Once that file is open we can run it line-by-line, e.g. by pressing `Ctl-Enter`.
+Alternatively you can entirety of a script file with the `source()` function.
+
+There are some dependencies: you need to have some packages installed.
+
+```{r}
+source("code/set-up.R")
+```
+
+
+To load the input data, we can run the following script:
+
+```{r}
+source("code/load-data.R")
+```
+
+
+
+## Including Code
+
+You can include R code in the document as follows:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
