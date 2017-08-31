@@ -5,22 +5,22 @@
   <evaluateDefaultValues active="0"/>
   <layer-tree-group expanded="1" checked="Qt::Checked" name="">
     <customproperties/>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="z20170831135227033" source="/home/robin/npct/pct-demo/data/z.geojson" name="z OGRGeoJSON MultiPolygon">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="z20170831135531314" source="/home/robin/npct/pct-demo/data/z.geojson" name="z OGRGeoJSON MultiPolygon">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="rnet20170831135227061" source="/home/robin/npct/pct-demo/data/rnet.geojson" name="rnet OGRGeoJSON LineString">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="rnet20170831135531337" source="/home/robin/npct/pct-demo/data/rnet.geojson" name="rnet OGRGeoJSON LineString">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="rq20170831135227071" source="/home/robin/npct/pct-demo/data/rq.geojson" name="rq OGRGeoJSON LineString">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="rq20170831135531345" source="/home/robin/npct/pct-demo/data/rq.geojson" name="rq OGRGeoJSON LineString">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="rf20170831135227222" source="/home/robin/npct/pct-demo/data/rf.geojson" name="rf OGRGeoJSON LineString">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="rf20170831135531496" source="/home/robin/npct/pct-demo/data/rf.geojson" name="rf OGRGeoJSON LineString">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="l20170831135227393" source="/home/robin/npct/pct-demo/data/l.geojson" name="l OGRGeoJSON LineString">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="l20170831135531665" source="/home/robin/npct/pct-demo/data/l.geojson" name="l OGRGeoJSON LineString">
       <customproperties/>
     </layer-tree-layer>
-    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="c20170831135227428" source="/home/robin/npct/pct-demo/data/c.geojson" name="c OGRGeoJSON Point">
+    <layer-tree-layer expanded="1" providerKey="ogr" checked="Qt::Checked" id="c20170831135531699" source="/home/robin/npct/pct-demo/data/c.geojson" name="c OGRGeoJSON Point">
       <customproperties/>
     </layer-tree-layer>
   </layer-tree-group>
@@ -52,43 +52,43 @@
   </mapcanvas>
   <layer-tree-canvas>
     <custom-order enabled="0">
-      <item>z20170831135227033</item>
-      <item>rnet20170831135227061</item>
-      <item>rq20170831135227071</item>
-      <item>rf20170831135227222</item>
-      <item>l20170831135227393</item>
-      <item>c20170831135227428</item>
+      <item>z20170831135531314</item>
+      <item>rnet20170831135531337</item>
+      <item>rq20170831135531345</item>
+      <item>rf20170831135531496</item>
+      <item>l20170831135531665</item>
+      <item>c20170831135531699</item>
     </custom-order>
   </layer-tree-canvas>
   <legend updateDrawingOrder="true">
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="z OGRGeoJSON MultiPolygon" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="z20170831135227033" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="z20170831135531314" visible="1"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="rnet OGRGeoJSON LineString" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="rnet20170831135227061" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="rnet20170831135531337" visible="1"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="rq OGRGeoJSON LineString" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="rq20170831135227071" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="rq20170831135531345" visible="1"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="rf OGRGeoJSON LineString" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="rf20170831135227222" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="rf20170831135531496" visible="1"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="l OGRGeoJSON LineString" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="l20170831135227393" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="l20170831135531665" visible="1"/>
       </filegroup>
     </legendlayer>
     <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="c OGRGeoJSON Point" showFeatureCount="0">
       <filegroup open="true" hidden="false">
-        <legendlayerfile isInOverview="0" layerid="c20170831135227428" visible="1"/>
+        <legendlayerfile isInOverview="0" layerid="c20170831135531699" visible="1"/>
       </filegroup>
     </legendlayer>
   </legend>
@@ -100,8 +100,8 @@
         <xmax>-1.09659838923647701</xmax>
         <ymax>50.75714214474555774</ymax>
       </extent>
-      <id>c20170831135227428</id>
-      <datasource>../data/c.geojson</datasource>
+      <id>c20170831135531699</id>
+      <datasource>./data/c.geojson</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -321,7 +321,7 @@
           <symbol alpha="1" clip_to_extent="1" type="marker" name="0">
             <layer pass="0" class="SimpleMarker" locked="0">
               <prop k="angle" v="0"/>
-              <prop k="color" v="36,255,175,255"/>
+              <prop k="color" v="103,86,203,255"/>
               <prop k="horizontal_anchor_point" v="1"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="name" v="circle"/>
@@ -440,7 +440,7 @@
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="2029880448">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="65">
         <columns/>
       </attributetableconfig>
       <editform></editform>
@@ -529,8 +529,8 @@
         <xmax>-1.08266391830879805</xmax>
         <ymax>50.80799226866886897</ymax>
       </extent>
-      <id>l20170831135227393</id>
-      <datasource>../data/l.geojson</datasource>
+      <id>l20170831135531665</id>
+      <datasource>./data/l.geojson</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -797,7 +797,7 @@
               <prop k="customdash_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="188,134,141,255"/>
+              <prop k="line_color" v="30,230,150,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="0.26"/>
               <prop k="line_width_unit" v="MM"/>
@@ -922,7 +922,7 @@
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="1961700656">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="1356405824">
         <columns/>
       </attributetableconfig>
       <editform></editform>
@@ -1025,8 +1025,8 @@
         <xmax>-1.08296900000000007</xmax>
         <ymax>50.80802400000000318</ymax>
       </extent>
-      <id>rf20170831135227222</id>
-      <datasource>../data/rf.geojson</datasource>
+      <id>rf20170831135531496</id>
+      <datasource>./data/rf.geojson</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -1293,7 +1293,7 @@
               <prop k="customdash_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="167,142,227,255"/>
+              <prop k="line_color" v="129,226,32,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="0.26"/>
               <prop k="line_width_unit" v="MM"/>
@@ -1521,8 +1521,8 @@
         <xmax>-1.09197799999999989</xmax>
         <ymax>50.7595230000000015</ymax>
       </extent>
-      <id>rnet20170831135227061</id>
-      <datasource>../data/rnet.geojson</datasource>
+      <id>rnet20170831135531337</id>
+      <datasource>./data/rnet.geojson</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -1579,7 +1579,7 @@
               <prop k="customdash_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="98,200,185,255"/>
+              <prop k="line_color" v="81,219,182,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="0.26"/>
               <prop k="line_width_unit" v="MM"/>
@@ -1634,7 +1634,7 @@
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="143555448">
         <columns/>
       </attributetableconfig>
       <editform></editform>
@@ -1667,8 +1667,8 @@
         <xmax>-1.08296900000000007</xmax>
         <ymax>50.80802400000000318</ymax>
       </extent>
-      <id>rq20170831135227071</id>
-      <datasource>../data/rq.geojson</datasource>
+      <id>rq20170831135531345</id>
+      <datasource>./data/rq.geojson</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -1758,7 +1758,7 @@
               <prop k="customdash_unit" v="MM"/>
               <prop k="draw_inside_polygon" v="0"/>
               <prop k="joinstyle" v="bevel"/>
-              <prop k="line_color" v="245,152,106,255"/>
+              <prop k="line_color" v="228,143,152,255"/>
               <prop k="line_style" v="solid"/>
               <prop k="line_width" v="0.26"/>
               <prop k="line_width_unit" v="MM"/>
@@ -1868,8 +1868,8 @@
         <xmax>-1.07002710086014696</xmax>
         <ymax>50.76683549245136362</ymax>
       </extent>
-      <id>z20170831135227033</id>
-      <datasource>../data/z.geojson</datasource>
+      <id>z20170831135531314</id>
+      <datasource>./data/z.geojson</datasource>
       <keywordList>
         <value></value>
       </keywordList>
@@ -2095,7 +2095,7 @@
           <symbol alpha="1" clip_to_extent="1" type="fill" name="0">
             <layer pass="0" class="SimpleFill" locked="0">
               <prop k="border_width_map_unit_scale" v="0,0,0,0,0,0"/>
-              <prop k="color" v="143,34,98,255"/>
+              <prop k="color" v="220,160,122,255"/>
               <prop k="joinstyle" v="bevel"/>
               <prop k="offset" v="0,0"/>
               <prop k="offset_map_unit_scale" v="0,0,0,0,0,0"/>
@@ -2209,7 +2209,7 @@
       <excludeAttributesWMS/>
       <excludeAttributesWFS/>
       <attributeactions default="-1"/>
-      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="0">
+      <attributetableconfig actionWidgetStyle="dropDown" sortExpression="" sortOrder="6619241">
         <columns/>
       </attributetableconfig>
       <editform></editform>
