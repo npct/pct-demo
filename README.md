@@ -33,71 +33,39 @@ To load the input data, we can run the following script:
 source("code/load-data.R")
 ```
 
-    ## Reading layer `c' from data source `/home/robin/npct/pct-demo/data/c.geojson' using driver `GeoJSON'
-    ## Simple feature collection with 18 features and 63 fields
-    ## geometry type:  POINT
-    ## dimension:      XY
-    ## bbox:           xmin: -1.526358 ymin: 50.59781 xmax: -1.096598 ymax: 50.75714
-    ## epsg (SRID):    4326
-    ## proj4string:    +proj=longlat +datum=WGS84 +no_defs
-    ## Reading layer `l' from data source `/home/robin/npct/pct-demo/data/l.geojson' using driver `GeoJSON'
-    ## Simple feature collection with 137 features and 77 fields
-    ## geometry type:  LINESTRING
-    ## dimension:      XY
-    ## bbox:           xmin: -1.538618 ymin: 50.59781 xmax: -1.082664 ymax: 50.80799
-    ## epsg (SRID):    4326
-    ## proj4string:    +proj=longlat +datum=WGS84 +no_defs
-    ## Reading layer `rf' from data source `/home/robin/npct/pct-demo/data/rf.geojson' using driver `GeoJSON'
-    ## Simple feature collection with 137 features and 77 fields
-    ## geometry type:  LINESTRING
-    ## dimension:      XY
-    ## bbox:           xmin: -1.538737 ymin: 50.59005 xmax: -1.082969 ymax: 50.80802
-    ## epsg (SRID):    4326
-    ## proj4string:    +proj=longlat +datum=WGS84 +no_defs
-    ## Reading layer `rq' from data source `/home/robin/npct/pct-demo/data/rq.geojson' using driver `GeoJSON'
-    ## Simple feature collection with 137 features and 18 fields
-    ## geometry type:  LINESTRING
-    ## dimension:      XY
-    ## bbox:           xmin: -1.538737 ymin: 50.59664 xmax: -1.082969 ymax: 50.80802
-    ## epsg (SRID):    4326
-    ## proj4string:    +proj=longlat +datum=WGS84 +no_defs
-    ## Reading layer `rnet' from data source `/home/robin/npct/pct-demo/data/rnet.geojson' using driver `GeoJSON'
-    ## Simple feature collection with 238 features and 7 fields
-    ## geometry type:  LINESTRING
-    ## dimension:      XY
-    ## bbox:           xmin: -1.526657 ymin: 50.59008 xmax: -1.091978 ymax: 50.75952
-    ## epsg (SRID):    4326
-    ## proj4string:    +proj=longlat +datum=WGS84 +no_defs
-    ## Reading layer `z' from data source `/home/robin/npct/pct-demo/data/z.geojson' using driver `GeoJSON'
-    ## Simple feature collection with 18 features and 65 fields
-    ## geometry type:  MULTIPOLYGON
-    ## dimension:      XY
-    ## bbox:           xmin: -1.591613 ymin: 50.57491 xmax: -1.070027 ymax: 50.76684
-    ## epsg (SRID):    4326
-    ## proj4string:    +proj=longlat +datum=WGS84 +no_defs
+Zones, centroids, lines, routes
+-------------------------------
 
-Including Code
---------------
-
-You can include R code in the document as follows:
+The input data we have just loaded can be seen by looking in the Environment tab in RStudio. Alternatively you can use the function `ls()`:
 
 ``` r
-summary(cars)
+ls()
 ```
 
-    ##      speed           dist       
-    ##  Min.   : 4.0   Min.   :  2.00  
-    ##  1st Qu.:12.0   1st Qu.: 26.00  
-    ##  Median :15.0   Median : 36.00  
-    ##  Mean   :15.4   Mean   : 42.98  
-    ##  3rd Qu.:19.0   3rd Qu.: 56.00  
-    ##  Max.   :25.0   Max.   :120.00
+    ## [1] "cents"      "l"          "pkgs"       "rf"         "rnet"      
+    ## [6] "rq"         "to_install" "z"
 
-Including Plots
----------------
+This shows that we have loaded the following data objects:
 
-You can also embed plots, for example:
+-   `z`, administrative zones about which we have cycling data
+-   `cents`, population-weighted centroids, one per zone
+-   `l`, straight 'desire lines' representing travel between one zone and another
+-   `rf` route-level data, like `l` but allocated to the road network
 
-![](README_files/figure-markdown_github-ascii_identifiers/pressure-1.png)
+We can plot all these layers interactively as follows:
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+``` r
+library(tmap)
+tmap_mode("view")
+```
+
+    ## tmap mode set to interactive viewing
+
+``` r
+qtm(z, "bicycle") +
+  qtm(cents) +
+  qtm(l) +
+  qtm(rf, col = "green")
+```
+
+![](README_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-5-1.png)

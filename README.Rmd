@@ -34,26 +34,35 @@ source("code/set-up.R")
 
 To load the input data, we can run the following script:
 
-```{r}
+```{r, results='hide'}
 source("code/load-data.R")
 ```
 
+## Zones, centroids, lines, routes
 
+The input data we have just loaded can be seen by looking in the Environment tab in RStudio. Alternatively you can use the function `ls()`:
 
-## Including Code
-
-You can include R code in the document as follows:
-
-```{r cars}
-summary(cars)
+```{r}
+ls()
 ```
 
-## Including Plots
+This shows that we have loaded the following data objects:
 
-You can also embed plots, for example:
+- `z`, administrative zones about which we have cycling data
+- `cents`, population-weighted centroids, one per zone
+- `l`, straight 'desire lines' representing travel between one zone and another
+- `rf` route-level data, like `l` but allocated to the road network
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+We can plot all these layers interactively as follows:
+
+```{r}
+library(tmap)
+tmap_mode("view")
+qtm(z, "bicycle") +
+  qtm(cents) +
+  qtm(l) +
+  qtm(rf, col = "green")
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
