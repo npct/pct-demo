@@ -24,7 +24,7 @@ server <- function(input, output, session) {
       addProviderTiles(providers$Stamen.TonerLite,
                        options = providerTileOptions(noWrap = TRUE)
       ) %>%
-      addPolylines(data = lines())
+      addPolylines(data = lines(), color = "red")
   })
 }
 
