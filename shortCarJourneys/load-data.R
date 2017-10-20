@@ -1,0 +1,6 @@
+# cents = st_read(dsn = "c.geojson")
+# l = st_read(dsn = "l.geojson")
+# rf = st_read(dsn = "rf.geojson")
+rf = readRDS("short_car_journeys.Rds")
+# rnet = st_read(dsn = "rnet.geojson")
+# z = st_read(dsn = "z.geojson")

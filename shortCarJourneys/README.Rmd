@@ -4,12 +4,14 @@ output: github_document
 ---
 
 ```{r setup, include=FALSE}
+if(!require(knitr)) install.packages(knitr)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Setup
 
 ```{r, message=FALSE}
+source("../code/set-up.R")
 library(dplyr)
 library(tmap)
 library(sf)
@@ -34,11 +36,7 @@ if(!file.exists("c.geojson")) {
 ```
 
 ```{r, results='hide'}
-cents = st_read(dsn = "c.geojson")
-l = st_read(dsn = "l.geojson")
-rf = st_read(dsn = "rf.geojson")
-rnet = st_read(dsn = "rnet.geojson")
-z = st_read(dsn = "z.geojson")
+source("load-data.R")
 ```
 
 ## Short car journeys in the region
@@ -58,5 +56,7 @@ short_car_journeys = rf %>%
   filter(rf_dist_km < 5, car_driver > 50)
 tmap_mode("view")
 qtm(short_car_journeys, lines.col = "car_driver", alpha = 0.1, lines.lwd = 4)
+nrow(short_car_journeys)
+saveRDS(short_car_journeys, "short_car_journeys.Rds")
 ```
 
