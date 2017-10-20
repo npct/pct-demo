@@ -1,30 +1,63 @@
 ShortCar Journeys: a new layer for the PCT
 ================
 
-R Markdown
-----------
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+Setup
+-----
 
 ``` r
-summary(cars)
+library(dplyr)
+library(tmap)
+library(sf)
 ```
 
-    ##      speed           dist       
-    ##  Min.   : 4.0   Min.   :  2.00  
-    ##  1st Qu.:12.0   1st Qu.: 26.00  
-    ##  Median :15.0   Median : 36.00  
-    ##  Mean   :15.4   Mean   : 42.98  
-    ##  3rd Qu.:19.0   3rd Qu.: 56.00  
-    ##  Max.   :25.0   Max.   :120.00
+Access data
+-----------
 
-Including Plots
----------------
+The data was downloaded as follows:
 
-You can also embed plots, for example:
+``` r
+if(dir.exists("shortCarJourneys")) setwd("shortCarJourneys")
+base_url = "https://github.com/npct/pct-outputs-regional-notR/raw/master/commute/msoa/"
+pct_files = c("c.geojson", "l.geojson", "rf.geojson", "rq.geojson", "rnet.geojson", "z.geojson")
+region = "west-yorkshire/" # can change
+i = pct_files[1]
+if(!file.exists("c.geojson")) {
+  for(i in pct_files) {
+  download.file(paste0(base_url, region, i), i)
+  }
+}
+```
 
-![](README_files/figure-markdown_github-ascii_identifiers/pressure-1.png)
+``` r
+cents = st_read(dsn = "c.geojson")
+l = st_read(dsn = "l.geojson")
+rf = st_read(dsn = "rf.geojson")
+rnet = st_read(dsn = "rnet.geojson")
+z = st_read(dsn = "z.geojson")
+```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Short car journeys in the region
+--------------------------------
+
+We set a limit defining short car journeys as 5 km on the 'fast' routes. In practice this could be any distance. We also set a limit on the minum number of people who drive to work, to focus the data:
+
+``` r
+max_distance = 5
+min_drivers = 50
+```
+
+These can be selected and visualised as follows:
+
+``` r
+short_car_journeys = rf %>% 
+  filter(rf_dist_km < 5, car_driver > 50)
+tmap_mode("view")
+```
+
+    ## tmap mode set to interactive viewing
+
+``` r
+qtm(short_car_journeys, lines.col = "car_driver", alpha = 0.1, lines.lwd = 4)
+```
+
+![](README_files/figure-markdown_github-ascii_identifiers/unnamed-chunk-4-1.png)
